@@ -12,3 +12,19 @@ function myFunction() {
         btn.innerHTML = "Play";
     }
 }
+
+
+
+const linkBtn = document.getElementById("naver");
+const newWindow = document.getElementById("newWindow");
+
+linkBtn.addEventListener('click', newLink);
+function newLink() {
+    window.location.href = 'https://www.naver.com';
+    
+}
+
+newWindow.addEventListener('click', newPage);
+function newPage() {
+    window.open('https://naver.com');
+}

@@ -52,7 +52,7 @@ body {
     margin-left: 10px;
 }
 
-#myBtn {
+.cssBtn {
     width: 200px;
     padding: 10px;
     
@@ -65,7 +65,11 @@ body {
     
 }
 
-#myBtn:hover {
+.cssBtn:hover {
     background-color: #ddd;
     color: black;
+}
+
+.right {
+    float: right;
 }
