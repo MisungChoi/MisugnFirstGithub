@@ -41,6 +41,17 @@ body {
 
 }
 
+.right-flex {
+    display: flex;
+    
+}
+
+#myAudio {
+    padding: 10px;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
 #myBtn {
     width: 200px;
     padding: 10px;

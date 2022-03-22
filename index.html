@@ -11,13 +11,24 @@
 </head>
 <body>
 
+    <!-- 수정되나? -->
+
     <div class="videofile">
         <video id="myVideo" autoplay muted loop>
             <source src="video/Record.mp4" type="video/mp4">
         </video>
 
+
         <div class="content">
-            <h1>Title</h1>
+            <div class="right-flex">
+                <h1>Title</h1>
+
+                <audio id="myAudio" controls onloadstart="this.volume=0.5">
+                    <source src="audio/both-of-us.mp3" type="audio/mpeg">
+                    
+                </audio>
+            </div>
+           
             <p>Lorem ipsum dolor adipisicing elit. Aut, deleniti? Quod recusandae adipisci porro fugiat qui odio eaque vitae, culpa nam quis. Expedita atque earum non. Ad, repudiandae. Magnam, possimus!</p>
             <button id="myBtn" type="button">Pause</button>
         </div>
