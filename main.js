@@ -26,5 +26,5 @@ function newLink() {
 
 newWindow.addEventListener('click', newPage);
 function newPage() {
-    window.open('https://naver.com');
+    window.open('ghost.html');
 }

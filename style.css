@@ -1,10 +1,11 @@
-* {
+* { 
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+
     font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -20,10 +21,7 @@ body {
 }
 
 #myVideo {
-    position: relative;
-    right: 0;
     width: 100%;
-
     border: none;
     margin: 0;
     padding: 0;
@@ -43,13 +41,24 @@ body {
 
 .right-flex {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
     
+}
+
+h1 {
+    height: 34px;
+    font-size: 34px;
 }
 
 #myAudio {
     padding: 10px;
-    margin-top: 13px;
     margin-left: 10px;
+}
+
+p{
+    margin: 20px 0 20px 0;
 }
 
 .cssBtn {

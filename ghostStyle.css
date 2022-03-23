@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ghost {
+    position: absolute;
+    animation: moveUpDown 3s infinite ease-in-out;
+}
+
+@keyframes moveUpDown {
+    0% { margin-top: 0px;}
+    50% {margin-top: -50px;}
+    100% {margin-top: 0px; }
+}
+.ghost .body{
+    position: relative;
+    width: 120px;
+    height: 160px;
+    background-color: #ffffff;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+
+    
+}
+
+.ghost .body .face {
+    display: flex;
+    width: 70px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.ghost .body .face .eye {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+.ghost .body .face .mouth {
+    width: 33px;
+    height: 15px;
+    background-color: #333;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 18px;
+    margin-top: 4px;
+}
+
+
+.ghost .bottom {
+   display: flex; 
+}
+
+.ghost .bottom .leg {
+    background-color: #ffffff;
+    width: 24px;
+    height: 15px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.ghost .bottom .leg:nth-child(2n) {
+    background-color: #000;
+    border-radius: 50%;
+
+    position: relative;
+    top: -6px;
+}
