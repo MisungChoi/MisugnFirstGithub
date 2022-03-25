@@ -27,7 +27,7 @@ function m() {
     
     else {
         audio.muted = true;
-        mute.innerHTML = "Sound play";  
+        mute.innerHTML = "Volume";  
       }
 }
 

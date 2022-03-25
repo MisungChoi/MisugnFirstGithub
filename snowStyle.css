@@ -1,0 +1,62 @@
+body {
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+}
+
+.snow {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: snow 10s infinite linear;
+    animation-delay: -2s;
+}
+
+.snow:nth-of-type(2n) {
+    width: 3px;
+    height: 3px;
+    animation-duration: 15s;
+    animation-delay: -2s;
+}
+
+.snow:nth-of-type(2n+1) {
+    width: 10px;
+    height: 10px;
+    animation-duration: 10s;
+    animation-delay: -2s;
+}
+
+.snow:nth-of-type(9n) {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    animation-duration: 30s;
+    animation-delay: -2s;
+} 
+
+@keyframes snow {
+  
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    20% {
+        transform: translate(-5px, 20vh);
+    }
+    40% {
+        opacity: 1;
+        transform: translate(5px, 40vh);
+    }
+    60% {
+        transform: translate(-5px, 60vh);
+    }
+    80% {
+        transform: translate(15px, 80vh);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }  
+}

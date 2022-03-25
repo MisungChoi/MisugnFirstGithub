@@ -5,25 +5,34 @@
 }
 
 body {
-    background-color: #000000;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
 
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    overflow: hidden;
 }
+
 
 .ghost {
     position: absolute;
-    animation: moveUpDown 3s infinite ease-in-out;
+    animation: moveUpDown 3s infinite;
 }
 
 @keyframes moveUpDown {
-    0% { margin-top: 0px;}
-    50% {margin-top: -50px;}
-    100% {margin-top: 0px; }
+    0% { margin-top: 0px;
+        opacity: 0.5;}
+    50% {
+        margin-top: -50px;
+        opacity: 1;
+        transform: scale(120%)
+    }
+    100% {margin-top: 0px; 
+        opacity: 0.5;}
 }
+
 .ghost .body{
     position: relative;
     width: 120px;
@@ -31,8 +40,6 @@ body {
     background-color: #ffffff;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
-
-    
 }
 
 .ghost .body .face {
@@ -53,6 +60,24 @@ body {
     height: 19px;
     border-radius: 50%;
     background-color: #333;
+
+    animation: scaler 1s infinite;
+}
+
+@keyframes scaler {
+    
+    0% {
+        border-radius: 50%;
+     }
+    50% {
+        
+        border-radius: 50%;
+    }
+    95% {
+        transform: scaleY(10%);
+        border-radius: 0%;
+    }
+     
 }
 
 .ghost .body .face .mouth {
@@ -65,6 +90,16 @@ body {
     border-bottom-right-radius: 10px;
     margin-left: 18px;
     margin-top: 4px;
+
+    animation: scaler2 3s infinite;
+}
+@keyframes scaler2 {
+    50% {
+        height: 28px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    
 }
 
 
@@ -78,6 +113,14 @@ body {
     height: 15px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+
+    animation: longleg 3s infinite;
+}
+
+@keyframes longleg {
+    50% {
+        height: 30px;
+    }
 }
 
 .ghost .bottom .leg:nth-child(2n) {
@@ -86,4 +129,62 @@ body {
 
     position: relative;
     top: -6px;
+}
+
+
+.snow {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: snow 10s infinite linear;
+    animation-delay: -2s;
+}
+
+.snow:nth-of-type(2n) {
+    width: 3px;
+    height: 3px;
+    animation-duration: 15s;
+    animation-delay: -2s;
+}
+
+.snow:nth-of-type(2n+1) {
+    width: 10px;
+    height: 10px;
+    animation-duration: 10s;
+    animation-delay: -2s;
+}
+
+.snow:nth-of-type(9n) {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    animation-duration: 30s;
+    animation-delay: -2s;
+} 
+
+@keyframes snow {
+  
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    20% {
+        transform: translate(-5px, 20vh);
+    }
+    40% {
+        opacity: 1;
+        transform: translate(5px, 40vh);
+    }
+    60% {
+        transform: translate(-5px, 60vh);
+    }
+    80% {
+        transform: translate(15px, 80vh);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }  
 }
